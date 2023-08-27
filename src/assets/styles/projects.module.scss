@@ -1,0 +1,146 @@
+@import "../styles/colors.scss";
+
+.sectionProjects {
+    padding: 3rem 1rem;
+    background-color: $backgroundBlack;
+    color: $white;
+    position: relative;
+    overflow: hidden;
+
+
+
+    .containerTitle {
+        position: relative;
+        /* margin-bottom: 6rem; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.contentProjects {
+    margin-bottom: 1rem;
+
+
+    .a {
+        background-color: bisque;
+    }
+
+    h2 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        overflow-wrap: break-word;
+        line-height: 1.6rem;
+        opacity: 0.8;
+    }
+
+    .contentImg {
+        margin-top: 1.5rem;
+
+        img {
+            max-height: 200px;
+            width: 100%;
+            display: block;
+            object-fit: contain;
+        }
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .botonDestokp {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .botonMobile {
+        display: none;
+
+    }
+}
+
+@media only screen and (min-width: 48em) and (max-width: 1023px) {
+    .sectionProjects {
+
+
+
+        .containerTitle {
+            h1 {
+                font-size: 5rem;
+            }
+
+            i {
+                left: -2.2rem;
+            }
+        }
+    }
+
+
+}
+
+//grid desktop laptop
+@media only screen and (min-width: 1024px) and (max-width: 2560px) {
+    .sectionProjects {
+        padding: 3rem 0;
+
+        .contentProjects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 6rem;
+            grid-auto-flow: dense;
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .a0 {
+            grid-area: 1/2 !important;
+        }
+
+        .contentImg {
+            img {
+                height: 200px;
+
+            }
+
+            margin-top: 0;
+        }
+
+
+
+        .containerTitle {
+            h1 {
+                margin-bottom: 2rem;
+                font-size: 7rem;
+            }
+
+            /*   i {
+                left: -8%;
+                font-size: 2rem;
+                top: 0;
+                transform: translateY(60%);
+            } */
+        }
+
+    }
+
+    .contentProjects {
+        margin-bottom: 1rem;
+
+        p {
+            margin: 1rem 0;
+        }
+    }
+
+}

@@ -1,0 +1,50 @@
+@import "../styles/colors.scss";
+
+.textAbout {
+    font-size: 1.2rem;
+    overflow-wrap: break-word;
+
+    line-height: 2rem;
+    color: $backgroundBlack;
+    /* opacity: .1; */
+}
+
+
+.sectionAbout {
+    background-color: $backgroundBlack;
+    position: relative;
+    padding: 1rem 0;
+    overflow: hidden;
+
+    p,
+    h2,
+    h3 {
+        color: $white;
+    }
+
+    .social {
+        color: $white;
+    }
+
+
+}
+
+//grid desktop laptop
+@media only screen and (min-width: 1024px) and (max-width: 2560px) {
+    .sectionAbout {}
+
+
+}
+
+@media only screen and (min-width: 48em) {}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 2560px) {
+
+    .sectionAbout {
+        padding: 2rem 0;
+
+
+    }
+
+}

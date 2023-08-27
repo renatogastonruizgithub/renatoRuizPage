@@ -1,0 +1,44 @@
+@import "../styles/colors.scss";
+
+.containerCard {
+    margin: 1rem 0;
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 20px;
+    background: $backgroundBlue;
+    padding: 1rem;
+
+
+
+    .cardImg {
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        border-radius: 20px;
+
+        img {
+            border-radius: 50%;
+            object-fit: contain;
+
+        }
+    }
+
+    .cardBody {
+        padding: 1rem;
+        color: $white;
+
+        h5 {
+            margin-bottom: .8rem;
+        }
+
+        p {
+            opacity: .5;
+        }
+    }
+
+}
