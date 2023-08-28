@@ -22,11 +22,9 @@ export default function Banner() {
                     flexDirection: { xs: "column", sm: "row", md: "row", lg: "row" },
                     alignItems: "center"
                   }}>
-                  <h2 style={{ marginRight: "1rem" }}>{item.Home.h3}</h2>
+                  <h2>{item.Home.h3}</h2>
                   <h1>{item.Home.h2}</h1>
                 </Stack>
-
-
                 <h3>{item.Home.h1}</h3>
               </div>
 

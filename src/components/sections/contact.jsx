@@ -16,7 +16,7 @@ const Contact = () => {
                 <div className={styles.wrapperContact}>
                     <div className={styles.containerTitle}>
                         <Title title="Contactame"></Title>
-                        <p>No dude en ponerse en contacto conmigo enviando el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+                        <p>No dude en ponerse en contacto con migo, envié el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
                     </div>
 
                     <div className={styles.containerForm}>
@@ -94,8 +94,8 @@ const Contact = () => {
 
                                     <Botn color={"#fff"}
                                         background={"#ff781f"}
-                                        font={"1.2rem"}
-                                        handleClick={() => handleSubmit}>
+                                        font={"1rem"}
+                                        handleClick={() => handleSubmit()}>
                                         <span>Enviar</span>
                                     </Botn>
                                 </form>

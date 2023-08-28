@@ -16,26 +16,28 @@
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
-        width: 89%;
         margin-left: auto;
         margin-right: auto;
-
+        text-align: center;
     }
 
     .contentImg {
         height: 140px;
         width: 140px;
-
-        /*  background-color: $orange; */
+        border-radius: 50%;
+        position: relative;
         overflow: hidden;
+        background-color: $backgroundBlue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
 
         img {
-            /*   background-color: $orange;
-            mix-blend-mode: luminosity; */
-
-            height: 140px;
-            width: 140px;
-
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: 0;
         }
     }
 
@@ -43,24 +45,23 @@
         position: relative;
         margin-top: 2rem;
         color: $white;
-        padding: 0 1rem;
-        text-align: justify;
-        overflow-wrap: break-word;
 
         h2 {
             font-size: 1.4rem;
             opacity: .5;
-            /*  margin-top: 2rem; */
-            color: $background;
-            /*    -webkit-text-stroke: 2px $background;
-            -webkit-text-fill-color: transparent; */
+            color: $backgroundBlue;
         }
 
         h1 {
             font-size: 1.5rem;
-            opacity: .5;
-            /*  margin-top: .5rem; */
-            letter-spacing: 4px;
+            letter-spacing: 1px;
+            margin-top: .5rem;
+            color: $orange;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1rem;
         }
     }
 }
@@ -84,10 +85,12 @@
         .bannerTexts {
             h1 {
                 font-size: 1.9rem;
+                margin-top: 0;
             }
 
             h2 {
                 font-size: 1.7rem;
+                margin-right: .3rem;
             }
         }
     }
@@ -105,6 +108,7 @@
                 font-size: 5rem;
                 opacity: 1;
                 color: $background;
+                margin-top: 0;
             }
 
             h2 {
@@ -158,13 +162,14 @@
                 font-size: 3rem;
                 color: $orange;
                 opacity: 1;
-                /*  -webkit-text-stroke: 1px $orange; */
+                margin-top: 0;
             }
 
             h2 {
                 font-size: 3rem;
                 color: $backgroundBlue;
                 opacity: 1;
+                margin-right: .5rem;
             }
 
             h3 {

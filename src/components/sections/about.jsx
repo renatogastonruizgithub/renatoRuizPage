@@ -13,14 +13,14 @@ import Certificated from "./certificated";
 import Social from "../shareds/Social";
 
 const About = () => {
-    const { list, myRef } = usePortfolio();
+    const { list } = usePortfolio();
 
     const aboutMe = (
         list.map((item, index) => {
             return (
                 <React.Fragment key={index}>
                     <div>
-                        <p className={about.textAbout}>
+                        <p /* className={about.textAbout} */>
                             {item.About.texto}
                         </p>
                     </div>
@@ -31,11 +31,11 @@ const About = () => {
 
 
     return (
-        <section ref={myRef} className={about.sectionAbout} id="About">
+        <section className={about.sectionAbout} id="About">
 
             <Container maxWidth="md" >
                 <Title title="About" ></Title>
-                <Grid container spacing={8}>
+                <Grid container spacing={0}>
                     <Grid item xs={12} md={12} lg={12}>
                         {aboutMe}
 
@@ -47,7 +47,7 @@ const About = () => {
                             width: "100%",
                             marginLeft: "auto",
                             marginRight: "auto",
-                            marginTop: "4rem"
+                            marginTop: "2rem"
 
                         }}>
 

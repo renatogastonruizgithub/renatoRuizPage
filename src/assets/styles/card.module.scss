@@ -2,7 +2,7 @@
 
 .containerCard {
     margin: 1rem 0;
-    width: 10rem;
+    /*  width: 100%; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -12,8 +12,6 @@
     border-radius: 20px;
     background: $backgroundBlue;
     padding: 1rem;
-
-
 
     .cardImg {
         overflow: hidden;
@@ -29,8 +27,9 @@
     }
 
     .cardBody {
-        padding: 1rem;
+        padding-top: 1rem;
         color: $white;
+        text-align: center;
 
         h5 {
             margin-bottom: .8rem;

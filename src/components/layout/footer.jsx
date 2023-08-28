@@ -25,12 +25,12 @@ export default function Footer() {
             />
             <Social></Social>
           </div>
-          <p>"El éxito es la suma de pequeños esfuerzos, repetidos día tras día." - Robert Collier</p>
+          <p style={{ fontSize: ".9rem" }}>"El éxito es la suma de pequeños esfuerzos, repetidos día tras día." - Robert Collier</p>
         </div>
 
 
         <hr></hr>
-        <p className={styles.firma}>© Copyright {today.getFullYear()} made witch  &hearts; by Renato Gaston Ruiz</p>
+        <p style={{ fontSize: ".9rem" }} className={styles.firma}>© Copyright {today.getFullYear()} made witch  &hearts; by Renato Gaston Ruiz</p>
       </Container>
     </section>
 

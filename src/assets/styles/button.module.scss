@@ -5,19 +5,18 @@
     overflow: hidden;
     border: none;
     border-radius: 25px;
-    padding: 12px 30px 12px 0;
+    text-transform: lowercase;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     letter-spacing: 1px;
-    width: 10rem;
 
     svg {
-        margin-left: 1rem;
+        margin-left: .5rem;
         transition: 0.2s;
         position: relative;
-        width: 15px;
+        width: 17px;
         transition-delay: 0.2s;
     }
 

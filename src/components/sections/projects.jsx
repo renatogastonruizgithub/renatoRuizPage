@@ -20,7 +20,7 @@ const Projects = () => {
             <Container maxWidth="md">
                 <div className={styles.containerTitle}>
                     <Title title="Proyectos"></Title>
-                    <div style={{ width: "7rem" }}>
+                    {/*  <div style={{ width: "7rem" }}>
                         <Botn color={"#fff"}
                             background={"transparent"}
                             font={1 + "rem"}
@@ -28,10 +28,16 @@ const Projects = () => {
                             <span>Ver todos</span>
                         </Botn>
 
-                    </div>
+                    </div> */}
 
                 </div>
-                <Slider AutoplayDelay={6000} slidesPerView={1} navegation={true}>
+                <Slider AutoplayDelay={6000}
+                    centeredSlides={false}
+                    navegation={true}
+                    slidesPerViewMobile={1}
+                    slidesPerViewTablet={1}
+                    slidesPerViewDesktop={1}
+                >
                     {
                         list.map((item, i) => {
                             return (
@@ -49,7 +55,7 @@ const Projects = () => {
                                                             <p>{project.text}</p>
                                                             <div className={styles.botonDestokp}>
                                                                 <Botn color={"#fff"}
-                                                                    background={"transparent"}
+                                                                    background={"#ff781f"}
                                                                     font={1 + "rem"}
 
                                                                     handleClick={() => details(project.id)}
@@ -65,8 +71,9 @@ const Projects = () => {
                                                         <div className={styles.contentImg} ><img src={project.imagen} /></div>
                                                         <div className={styles.botonMobile}>
                                                             <Botn color={"#fff"}
-                                                                background={"transparent"}
+                                                                background={"#ff781f"}
                                                                 font={1 + "rem"}
+
                                                                 handleClick={() => details(project.id)}
                                                             >
                                                                 <span>Saber mas</span>

@@ -57,7 +57,7 @@ export const ProviderComponent = ({ children }) => {
 
 
   const idDetails = async (id) => {
-
+    setLoading(true);
     await axios.get(`https://mipaginaweb.fly.dev/projects/${id}`).then((res) => {
       setDetails(res.data.body);
       setLoading(false);

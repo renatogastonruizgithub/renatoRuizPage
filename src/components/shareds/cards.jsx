@@ -9,7 +9,7 @@ const Card = ({ height, width, img, title, paragraph }) => {
             </div>
             <div className={styles.cardBody}>
                 <h5>{title}</h5>
-                <p>{paragraph}</p>
+                <span style={{ opacity: ".5" }}>{paragraph}</span>
             </div>
         </div>
     )

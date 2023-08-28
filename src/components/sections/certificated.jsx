@@ -18,8 +18,13 @@ const Certificated = () => {
     const { list } = usePortfolio();
     return (
         <>
-            <Typography variant="h5" color="#fff" sx={{ marginBottom: "2rem" }}>My Certificateds</Typography>
-            <Slider AutoplayDelay={4000} slidesPerView={3}>
+            <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>My Certificateds</Typography>
+            <Slider AutoplayDelay={4000}
+                centeredSlides={true}
+                slidesPerViewMobile={2}
+                slidesPerViewTablet={3}
+                slidesPerViewDesktop={4}
+            >
                 {
                     list.map((item, i) => {
                         return (

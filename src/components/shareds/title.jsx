@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styles from "../../assets/styles/title.module.scss";
 const Title = ({ title }) => {
     return (
         <div style={{
@@ -8,17 +8,14 @@ const Title = ({ title }) => {
             width: "100%",
             overflow: "hidden",
             position: "relative",
-            marginBottom: "3rem",
             textTransform: "uppercase"
         }}>
-            <h2 style={{ fontSize: "5rem", position: "relative", color: "#fff" }}>{title}
+            <h2 className={styles.title} style={{ position: "relative", color: "#fff" }}>{title}
                 <span style={{
                     position: "absolute",
-                    fontSize: "8rem",
                     marginLeft: ".4rem",
-                    color: "violet",
-                    bottom: 0,
-                    right: "-2rem"
+                    color: "#ffc119",
+
                 }}>.</span>
 
             </h2>

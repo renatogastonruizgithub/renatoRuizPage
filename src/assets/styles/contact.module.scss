@@ -3,22 +3,19 @@
 .sectionContact {
     background-color: $backgroundBlack;
     position: relative;
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;
     overflow: hidden;
 
     .containerTitle {
+        color: $white;
+
         h1 {
             font-size: 3rem;
             color: $white;
             margin-bottom: 1.2rem;
         }
 
-        p {
-            color: $white;
-            font-size: 1.5rem;
-            line-height: 2rem;
-            opacity: 0.8;
-        }
+
     }
 
 
@@ -167,10 +164,7 @@
                 margin-bottom: 1rem;
             }
 
-            p {
-                font-size: 1.1rem;
-                line-height: 1.6rem;
-            }
+
         }
     }
 

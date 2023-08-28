@@ -8,23 +8,36 @@ import 'swiper/css/navigation';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const Slider = ({ children, navegation, AutoplayDelay, slidesPerView }) => {
+const Slider = ({
+    children, navegation,
+    AutoplayDelay,
+    slidesPerViewMobile,
+    slidesPerViewTablet,
+    slidesPerViewDesktop,
+    centeredSlides
+}) => {
     const swiperRef = useRef(null);
     const nextButtonRef = useRef(null);
     const prevButtonRef = useRef(null);
     const paginationRef = useRef(null);
     const swiperOptions = {
         breakpoints: {
-            768: {
-                slidesPerView: slidesPerView,
+            320: {
+                slidesPerView: slidesPerViewMobile,
                 spaceBetween: 10,
+                centeredSlides: centeredSlides,
+            },
+            768: {
+                slidesPerView: slidesPerViewTablet,
+                spaceBetween: 10,
+
             },
             1024: {
-                slidesPerView: slidesPerView,
+                slidesPerView: slidesPerViewDesktop,
                 spaceBetween: 20,
             },
             1440: {
-                slidesPerView: slidesPerView,
+                slidesPerView: slidesPerViewDesktop,
                 spaceBetween: 20,
             },
         },
@@ -40,18 +53,17 @@ const Slider = ({ children, navegation, AutoplayDelay, slidesPerView }) => {
             delay: AutoplayDelay,
             disableOnInteraction: false,
         },
-        freeMode: true,
+        /*  freeMode: true, */
         initialSlide: 0,
-        spaceBetween: 50,
-        centeredSlides: false,
-
+        /*   centeredSlides: centeredSlides, */
+        slidesPerView: 'auto',
         onSlideChange: () => handleSlideChange(), // Llama a la función de SlideChange local
         onSwiper: (swiper) => swiperRef.current = swiper, // Guarda la instancia de Swiper en el ref
     };
 
 
     const handleSlideChange = () => {
-        console.log('Slide changed in this Slider instance');
+
     };
 
     useEffect(() => {

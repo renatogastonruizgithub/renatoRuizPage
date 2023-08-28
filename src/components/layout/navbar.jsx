@@ -1,6 +1,6 @@
 
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../../public/logoNegro.jpg";
+import logo from "../../../public/logoNegro-removebg-preview.png";
 import styles from "../../assets/styles/navbar.module.scss";
 import Menu from "../shareds/menuMobile";
 import { useEffect, useRef, useState } from "react";
@@ -25,9 +25,9 @@ export default function Navbar() {
     <>
 
 
-      <section className={`${visibleElement ? " " : "navScroller"}`}>
+      <section >
         <Container maxWidth="md">
-          <div className={styles.containerNav} >
+          <div className={`${visibleElement ? styles.containerNav : "navScroller"}`} >
 
             <div className={styles.logoAndMenu}>
               <img
@@ -44,7 +44,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <div className={`${styles.contentMenuLinks} ${visibleElement ? "fondo" : "letrasNegra"}`}>
+            <div className={`${styles.contentMenuLinks} ${visibleElement ? "fondo" : "fondo"}`}>
               <CustomLink></CustomLink>
             </div>
           </div>
