@@ -11,12 +11,12 @@ const Title = ({ title }) => {
             textTransform: "uppercase"
         }}>
             <h2 className={styles.title} style={{ position: "relative", color: "#fff" }}>{title}
-                <span style={{
+             {/*    <span style={{
                     position: "absolute",
                     marginLeft: ".4rem",
                     color: "#ffc119",
 
-                }}>.</span>
+                }}>.</span> */}
 
             </h2>
 

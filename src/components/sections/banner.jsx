@@ -5,6 +5,7 @@ import styles from "../../assets/styles/banner.module.scss";
 import logo from "../../../public/logoNegro.jpg"
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { Container, Stack } from "@mui/material";
+import Botn from "../shareds/buton";
 
 
 export default function Banner() {
@@ -19,13 +20,21 @@ export default function Banner() {
                 <Stack direction="row"
                   sx={{
                     display: "flex",
-                    flexDirection: { xs: "column", sm: "row", md: "row", lg: "row" },
+                    flexDirection: { xs: "column", sm: "column", md: "column", lg: "column" },
                     alignItems: "center"
                   }}>
-                  <h2>{item.Home.h3}</h2>
-                  <h1>{item.Home.h2}</h1>
+                    <h2>{item.Home.h3}</h2>
+                    <h1>{item.Home.h2}</h1>
+                    <h3 style={{ marginBottom: "2rem" }}>{item.Home.h1}</h3>
+                      <Botn color={"#fff"}
+                        background={"#ff781f"}
+                        font={"1rem"}
+                        arrow="down"
+                        handleClick={() => handleSubmit()}>
+                        <span>Ver proyectos</span>
+                      </Botn>
                 </Stack>
-                <h3>{item.Home.h1}</h3>
+
               </div>
 
               <div className={styles.contentImg}>
@@ -38,16 +47,13 @@ export default function Banner() {
               </div>
 
             </div>
+
           )
         })}
 
 
-        <ArrowDownwardIcon fontSize="large" sx={{
-          position: "absolute",
-          left: "50%",
-          bottom: "2rem",
-          color: "#fff"
-        }} />
+
+
       </Container >
     </section>
 

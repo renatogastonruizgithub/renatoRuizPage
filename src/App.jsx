@@ -26,8 +26,9 @@ function App() {
           (<Layout>
 
             < Banner />
-            <About></About>
             <Projects></Projects>
+            <About></About>
+            
             <Contact></Contact>
 
 

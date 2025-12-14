@@ -95,6 +95,7 @@ const Contact = () => {
                                     <Botn color={"#fff"}
                                         background={"#ff781f"}
                                         font={"1rem"}
+                                        arrow="right"
                                         handleClick={() => handleSubmit()}>
                                         <span>Enviar</span>
                                     </Botn>

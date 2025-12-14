@@ -18,7 +18,7 @@ const Certificated = () => {
     const { list } = usePortfolio();
     return (
         <>
-            <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>My Certificateds</Typography>
+            <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>Cursos</Typography>
             <Slider AutoplayDelay={4000}
                 centeredSlides={true}
                 slidesPerViewMobile={2}

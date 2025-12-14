@@ -34,7 +34,7 @@ const About = () => {
         <section className={about.sectionAbout} id="About">
 
             <Container maxWidth="md" >
-                <Title title="About" ></Title>
+                <Title title="SOBRE MI" ></Title>
                 <Grid container spacing={0}>
                     <Grid item xs={12} md={12} lg={12}>
                         {aboutMe}

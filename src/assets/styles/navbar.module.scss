@@ -119,7 +119,7 @@ $heightBar: 2px;
     .contentMenuLinks {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         a {
             font-size: 1.5rem;

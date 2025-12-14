@@ -30,7 +30,7 @@ const Skills = () => {
     )
     return (
         <>
-            <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>My skills</Typography>
+            <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>Habilidades</Typography>
             <Slider AutoplayDelay={3000} centeredSlides={false} slidesPerViewDesktop={5} slidesPerViewMobile={2} slidesPerViewTablet={5}>
                 {skills}
             </Slider>

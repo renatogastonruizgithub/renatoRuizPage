@@ -7,8 +7,8 @@ const CustomLink = () => {
   const [activeLink, setActiveLink] = useState(null);
   const links = [
     { title: 'Home', url: '#Banner' },
-    { title: 'Sobre mi', url: '#About' },
     { title: 'Proyectos', url: '#Projects' },
+    { title: 'Sobre mi', url: '#About' },    
     { title: 'Contactame', url: '#Contact' },
 
   ];
