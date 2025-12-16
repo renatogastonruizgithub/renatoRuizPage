@@ -47,7 +47,7 @@ export const ProviderComponent = ({ children }) => {
 
   function getPortfolio() {
     setLoading(true);
-    axios.get("https://mipaginaweb.fly.dev/portafolio").then((res) => {
+    axios.get("https://v2-0-portafolio.fly.dev/api/portafolio").then((res) => {
       setList(res.data.body);
       console.log(res.data.body)
       setLoading(false);
@@ -58,7 +58,7 @@ export const ProviderComponent = ({ children }) => {
 
   const idDetails = async (id) => {
     setLoading(true);
-    await axios.get(`https://mipaginaweb.fly.dev/projects/${id}`).then((res) => {
+    await axios.get(`https://v2-0-portafolio.fly.dev/api/projects/${id}`).then((res) => {
       setDetails(res.data.body);
       setLoading(false);
     });
