@@ -1,4 +1,4 @@
-
+ 
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -11,15 +11,15 @@ import Card from '../shareds/cards';
 import styles from "../../assets/styles/certificated.module.scss";
 import Slider from '../shareds/slider';
 import { Typography } from '@mui/material';
+ 
 
-
-const Certificated = () => {
+ const Certificated = () => {
 
     const { list } = usePortfolio();
     return (
         <>
             <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>Cursos</Typography>
-            <Slider AutoplayDelay={4000}
+            <Slider /* AutoplayDelay={4000} */
                 centeredSlides={true}
                 slidesPerViewMobile={2}
                 slidesPerViewTablet={3}
@@ -58,4 +58,4 @@ const Certificated = () => {
 
     )
 }
-export default Certificated
+export default Certificated 

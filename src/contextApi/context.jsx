@@ -13,7 +13,8 @@ export const ProviderComponent = ({ children }) => {
 
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [details, setDetails] = useState([]);
+  const [projects, setProjects] = useState([]);
+
   const [visibleElement, setVisibleElement] = useState()
 
   const myRef = useRef()
@@ -48,24 +49,27 @@ export const ProviderComponent = ({ children }) => {
   function getPortfolio() {
     setLoading(true);
     axios.get("https://v2-0-portafolio.fly.dev/api/portafolio").then((res) => {
-      setList(res.data.body);
-      console.log(res.data.body)
+      console.log(res.data.portafolio)
+      setList(res.data.portafolio);
+      
       setLoading(false);
     })
   }
 
 
 
-  const idDetails = async (id) => {
+  const getprojects = async () => {
     setLoading(true);
-    await axios.get(`https://v2-0-portafolio.fly.dev/api/projects/${id}`).then((res) => {
-      setDetails(res.data.body);
+    await axios.get(`https://v2-0-portafolio.fly.dev/api/getProjects/`).then((res) => {
+      console.log(res.data.projects)
+      setProjects(res.data.projects);
       setLoading(false);
     });
-    return details
+    return projects
   }
 
 
-  return <contextApi.Provider value={{ observer, getPortfolio, visibleElement, myRef, list, details, idDetails, loading }}>{children}</contextApi.Provider>;
+  return <contextApi.Provider value={{getprojects, observer, getPortfolio,
+     visibleElement, myRef, list,projects, loading }}>{children}</contextApi.Provider>;
 };
 

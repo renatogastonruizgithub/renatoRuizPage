@@ -9,7 +9,7 @@ import { Container, Grid, IconButton, Stack, Typography } from "@mui/material";
 
 import Slider from "../shareds/slider";
 
-import Certificated from "./certificated";
+import Certificated from "./certificated"; 
 import Social from "../shareds/Social";
 
 const About = () => {
@@ -64,7 +64,7 @@ const About = () => {
                             marginTop: "4rem"
 
                         }}>
-                            <Certificated></Certificated>
+                          <Certificated></Certificated> 
 
                         </div>
 

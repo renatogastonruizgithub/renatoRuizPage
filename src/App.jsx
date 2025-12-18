@@ -10,10 +10,10 @@ import Contact from './components/sections/contact';
 
 function App() {
 
-  const { loading, getPortfolio } = usePortfolio();
+  const { loading, getPortfolio ,getprojects} = usePortfolio();
   useEffect(() => {
     getPortfolio()
-
+    getprojects()
   }, [])
 
 

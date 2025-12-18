@@ -11,11 +11,8 @@ import ProjectCard from "../shareds/ProjectCard";
 
 const Projects = () => {
     const router = useNavigate();
-    const { list, idDetails } = usePortfolio();
-    const details = (id) => {
-        idDetails(id)
-        router("http://localhost:8080/details/")
-    }
+    const {  projects } = usePortfolio();
+ 
     return (
 
         <section className={styles.sectionProjects} id="Projects">
@@ -25,21 +22,21 @@ const Projects = () => {
                 </div>
 
                 <Grid container spacing={4} justifyContent="center">
-                    {list.map((item) =>
-                        item.Projects.map((project, l) => (
+                    {
+                        projects.map((project, l) => (
                             <Grid item xs={12} sm={6} md={4} key={project.id || l}>
                                 <ProjectCard
                                     image={project.imagen}
                                     title={project.title}
-                                    demoUrl={true}
-                                    codeUrl={true}
-                                    technologies={["vue", "js"]}
+                                    demoUrl={project.link}
+                                    codeUrl={project.github}
+                                    technologies={project.Skills?.map(skill => skill.nombre)}
                                     description={project.text}
-                                    onDetails={() => details(project.id)}
+                                   
                                 />
                             </Grid>
                         ))
-                    )}
+                    }
                 </Grid>
             </Container>
         </section>

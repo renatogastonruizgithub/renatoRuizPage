@@ -30,7 +30,7 @@ export default function Banner() {
                         background={"#ff781f"}
                         font={"1rem"}
                         arrow="down"
-                        handleClick={() => handleSubmit()}>
+                        >
                         <span>Ver proyectos</span>
                       </Botn>
                 </Stack>
