@@ -68,8 +68,8 @@
 }
 
 .sun {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
     background: linear-gradient(to right, #fcbb04, #fffc00);
     border-radius: 60px;
