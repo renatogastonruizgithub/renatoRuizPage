@@ -26,19 +26,28 @@ const Slider = ({
                 slidesPerView: slidesPerViewMobile,
                 spaceBetween: 10,
                 centeredSlides: centeredSlides,
+                autoplay: false,
             },
             768: {
                 slidesPerView: slidesPerViewTablet,
                 spaceBetween: 10,
-
+                 autoplay: false,
             },
             1024: {
                 slidesPerView: slidesPerViewDesktop,
                 spaceBetween: 20,
+                     autoplay: {
+                delay: AutoplayDelay,
+                disableOnInteraction: false,
+            },
             },
             1440: {
                 slidesPerView: slidesPerViewDesktop,
                 spaceBetween: 20,
+                     autoplay: {
+                delay: AutoplayDelay,
+                disableOnInteraction: false,
+            },
             },
         },
         navigation: {

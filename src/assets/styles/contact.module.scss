@@ -3,7 +3,7 @@
 .sectionContact {
     background-color: $backgroundBlack;
     position: relative;
-    padding: 1.5rem 1rem;
+    padding-top: 1rem;
     overflow: hidden;
 
     .containerTitle {
@@ -30,7 +30,7 @@
         display: grid;
         place-items: center;
         background-color: $backgroundBlue;
-        padding: 1rem;
+        
         border-radius: 12px;
 
         >div {
@@ -123,7 +123,7 @@
         place-items: center; */
 
         form {
-            max-width: 35rem;
+         
 
             .inputContainer {
                 width: 100%;
@@ -156,8 +156,13 @@
     .containerForm {
         display: grid;
         place-items: center;
+        form {
+             max-width: 35rem;
+             background-color:#121212;
+             padding: 1rem;
+         }
     }
-
+         
     .wrapperContact {
 
         .containerTitle {

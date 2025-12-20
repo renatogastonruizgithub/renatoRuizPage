@@ -18,8 +18,8 @@ import { Typography } from '@mui/material';
     const { list } = usePortfolio();
     return (
         <>
-            <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>Cursos</Typography>
-            <Slider /* AutoplayDelay={4000} */
+            <Typography variant="h6" color="#fff" >Cursos</Typography>
+            <Slider 
                 centeredSlides={true}
                 slidesPerViewMobile={2}
                 slidesPerViewTablet={3}
@@ -32,7 +32,7 @@ import { Typography } from '@mui/material';
                                 {
                                     item.Certificateds.map((certificated, i) => {
                                         return (
-                                            <SwiperSlide style={{ cursor: "pointer" }} key={i}>
+                                            <SwiperSlide  key={i}>
                                                 <Card
                                                     img={certificated.logo}
                                                     height={80}

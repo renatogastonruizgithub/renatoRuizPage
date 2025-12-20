@@ -15,7 +15,7 @@ const Skills = () => {
                             item.Skills.map((skill, g) => {
                                 return (
 
-                                    <SwiperSlide style={{ cursor: "pointer" }} key={g}>
+                                    <SwiperSlide  key={g}>
                                         <div style={{ position: "relative", height: "50px" }}>
                                             <Skill img={skill.link} text={skill.nombre} />
                                         </div >
