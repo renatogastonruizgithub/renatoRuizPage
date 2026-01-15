@@ -50,10 +50,9 @@ const Contact = () => {
                                 setDisableForm(true)
 
                                 const emailPayload = {
-                                    to: "renatogastonruiz.00@gmail.com", // tu email destino
-                                    subject: `Contacto desde portfolio - ${valores.nombre}`,
-                                    text: `Nombre: ${valores.nombre} Email: ${valores.email} 
-                                    Mensaje:${valores.motivo}`,
+                                    nombre: valores.nombre, // tu email destino
+                                    email:  valores.email,
+                                    motivo: valores.motivo
                                 };
 
                                 axios.post(`https://v2-0-portafolio.fly.dev/api/send`, emailPayload)
