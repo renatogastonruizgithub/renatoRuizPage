@@ -60,14 +60,13 @@ const Contact = () => {
                                         setEnviado(true)
                                         resetForm()
                                         seteLoader(false)
-                                      /*   setTimeout(() => { setEnviado(false), setDisableForm(true) }, 3000) */
+                                        setTimeout(() => { setEnviado(false), setDisableForm(false) }, 3000) 
                                     })
-                                    .catch(() => {
-                                        setEnviado(true)
-                                     /*    seterrorAlEnviar(true)
+                                    .catch(() => {                                      
+                                        seterrorAlEnviar(true)
                                         seteLoader(false)
                                         setTimeout(() => { seterrorAlEnviar(false), setDisableForm(false) }, 10000)
-                                        resetForm() */
+                                        resetForm() 
                                     })
 
                             }}
