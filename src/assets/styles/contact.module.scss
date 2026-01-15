@@ -22,16 +22,18 @@
 }
 
 .containerForm {
-    padding: 1rem 0;
+    /*  padding: 1rem 0; */
     margin-top: 3rem;
 
     form {
         width: 100%;
-        display: grid;
-        place-items: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         background-color: $backgroundBlue;
-        
         border-radius: 12px;
+        padding: 1rem 0;
 
         >div {
             margin-bottom: 1.5rem;
@@ -39,91 +41,79 @@
         }
 
         .inputContainer {
-            width: 100%;
+            /*  width: 100%; */
             position: relative;
             overflow: hidden;
             border-radius: 20px;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
 
             input[type="text"],
             input[type="email"] {
                 color: $backgroundBlue;
-                width: 100%;
+                width: 90%;
                 box-sizing: border-box;
                 letter-spacing: 1px;
-                background-color: $white;
+                background-color: #c0c0c0;
                 border: none;
                 border-radius: 20px;
                 outline: none;
                 padding: .5rem;
-                opacity: .9;
 
                 &:focus {
                     outline: none;
                     opacity: 1;
+                    background-color: #fff;
                 }
-            }
-
-            .effect~.focusBorder {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background-color: $violet;
-                transition: 0.4s;
-            }
-
-            .effect:focus~.focusBorder {
-                width: 100%;
-                transition: 0.4s;
+                &::placeholder {
+                    color: #666;
+                } 
+                /* CON TEXTO (aunque NO tenga foco) → blanco */
+                &:not(:placeholder-shown) {
+                    background-color: #fff;
+                }
             }
 
             textarea {
                 color: $backgroundBlue;
-                width: 100%;
+                width: 90%;
                 box-sizing: border-box;
                 letter-spacing: 1px;
-                background-color: $white;
+                background-color: #c0c0c0;
                 border: none;
                 border-radius: 20px;
                 outline: none;
                 padding: .5rem;
-                opacity: .9;
-
                 &:focus {
                     outline: none;
                     opacity: 1;
+                    background-color: #fff;
+                }
+                  &::placeholder {
+                    color: #666;
+                }          
+
+                /* CON TEXTO (aunque NO tenga foco) → blanco */
+                &:not(:placeholder-shown) {
+                    background-color: #fff;
                 }
             }
 
-            .effectArea:focus~.focusBorderArea {
-                width: 100%;
-                transition: 0.4s;
-            }
 
-            .effectArea~.focusBorderArea {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background-color: $violet;
-                transition: 0.4s;
-            }
         }
     }
 
 }
 
 @media only screen and (min-width: 768px) and (max-width: 2560px) {
-    .containerForm {
-        /*   display: grid;
-        place-items: center; */
+    /*.containerForm {
+          display: grid;
+        place-items: center; 
 
-        form {
-         
+      /*   form {
+
 
             .inputContainer {
                 width: 100%;
@@ -132,8 +122,8 @@
                     width: 100%;
                 }
             }
-        }
-    }
+        } 
+    }*/
 
 }
 
@@ -156,13 +146,28 @@
     .containerForm {
         display: grid;
         place-items: center;
+
         form {
-             max-width: 35rem;
-             background-color:#121212;
-             padding: 1rem;
-         }
+
+            background-color: #121212;
+            padding: 1rem;
+
+            .inputContainer {
+
+
+                input[type="text"],
+                input[type="email"] {
+
+                    padding: 1rem;
+                }
+
+                textarea {
+                    padding: 1rem;
+                }
+            }
+        }
     }
-         
+
     .wrapperContact {
 
         .containerTitle {
@@ -189,6 +194,7 @@ $text-light: #fefefe;
     color: $white;
     padding-top: .3rem;
     font-size: .8rem;
+    text-align: center;
 
     a,
     i {

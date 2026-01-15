@@ -41,7 +41,7 @@ const About = () => {
 
                         <Social marginTop={2}></Social>
                     </Grid>
-                    <Grid item xs={12} md={12} lg={12}>
+                {/*     <Grid item xs={12} md={12} lg={12}>
                         <div style={{
                             position: "relative",
                             width: "100%",
@@ -51,9 +51,10 @@ const About = () => {
 
                         }}>
 
-                            <Skills></Skills>
-                        </div>
-                    </Grid>
+                           
+                        </div> </Grid> */}
+                         <Skills></Skills>
+                   
                     <Grid item xs={12} md={12} lg={12} >
 
                         <div style={{
@@ -61,7 +62,7 @@ const About = () => {
                             width: "100%",
                             marginLeft: "auto",
                             marginRight: "auto",
-                            marginTop: "4rem"
+                            marginTop: "2rem"
 
                         }}>
                           <Certificated></Certificated> 

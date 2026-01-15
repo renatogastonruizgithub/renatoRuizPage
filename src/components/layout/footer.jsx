@@ -30,7 +30,7 @@ export default function Footer() {
 
 
         <hr></hr>
-        <p style={{ fontSize: ".9rem" }} className={styles.firma}>© Copyright {today.getFullYear()} made witch  &hearts; by Renato Gaston Ruiz</p>
+        <p style={{ fontSize: ".9rem" }} className={styles.firma}>© Copyright {today.getFullYear()} &hearts;  desarrollado por Renato Gaston Ruiz</p>
       </Container>
     </section>
 

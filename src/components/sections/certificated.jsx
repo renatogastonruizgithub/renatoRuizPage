@@ -1,8 +1,8 @@
  
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Autoplay, Navigation } from "swiper/modules";
+
 import "swiper/css";
-import "swiper/scss/pagination";
+/* import "swiper/scss/pagination"; */
 import 'swiper/css/navigation';
 
 import { usePortfolio } from "../../contextApi/context";

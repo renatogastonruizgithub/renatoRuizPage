@@ -101,7 +101,7 @@ const Slider = ({
 
             }
 
-            <div ref={paginationRef} className="swiper-pagination colorPagination" />
+            {/* <div ref={paginationRef} className="swiper-pagination colorPagination" /> */}
         </div>
     )
 }

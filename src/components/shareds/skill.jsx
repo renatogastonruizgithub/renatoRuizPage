@@ -13,7 +13,8 @@ const Skill = ({ img, text }) => {
 
     )
     return (
-        <div style={{ position: "relative", marginLeft: "auto", marginRight: "auto", display: "grid", placeItems: "center" }}>
+        <div style={{ position: "relative", marginLeft: "auto", marginRight: "auto",
+         display: "grid", placeItems: "center" }}>
             <Chip
                 avatar={avatar}
                 label={text}

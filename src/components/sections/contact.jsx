@@ -48,7 +48,15 @@ const Contact = () => {
                             onSubmit={(valores, { resetForm }) => {
                                 seteLoader(true)
                                 setDisableForm(true)
-                                axios.post(`https://mipaginaweb.fly.dev/email`, valores)
+
+                                const emailPayload = {
+                                    to: "renatogastonruiz.00@gmail.com", // tu email destino
+                                    subject: `Contacto desde portfolio - ${valores.nombre}`,
+                                    text: `Nombre: ${valores.nombre} Email: ${valores.email} 
+                                    Mensaje:${valores.motivo}`,
+                                };
+
+                                axios.post(`https://v2-0-portafolio.fly.dev/api/send`, emailPayload)
                                     .then((res) => {
                                         setEnviado(true)
                                         resetForm()
@@ -114,7 +122,7 @@ const Contact = () => {
                                 <div className={styles.menssageError}>
                                     <span> Ocurrio un error, por favor cumuniquese al</span>
 
-                                    <a href="https://wa.me/3512087800?text=hola" target="_blank"><i class="bi bi-whatsapp"></i> 3512087800</a>
+                                    <a href="https://wa.me/3512087800?text=hola" target="_blank"><i class="bi bi-whatsapp"></i> 351817364</a>
                                 </div>
 
                             </div>}
