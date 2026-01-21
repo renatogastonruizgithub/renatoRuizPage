@@ -1,15 +1,13 @@
-
 import { usePortfolio } from "../../contextApi/context";
 import styles from "../../assets/styles/banner.module.scss";
-
-import logo from "../../../public/logoNegro.jpg"
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { Container, Stack } from "@mui/material";
 import Botn from "../shareds/buton";
+import { useRef } from "react";
 
 
 export default function Banner() {
   const { list, myRef } = usePortfolio();
+
   return (
     <section ref={myRef} className={styles.imgBanner} id="Banner">
       <Container maxWidth="md">
@@ -23,16 +21,20 @@ export default function Banner() {
                     flexDirection: { xs: "column", sm: "column", md: "column", lg: "column" },
                     alignItems: "center"
                   }}>
-                    <h2>{item.Home.h3}</h2>
-                    <h1>{item.Home.h2}</h1>
-                    <h3 style={{ marginBottom: "2rem" }}>{item.Home.h1}</h3>
-                      <Botn color={"#fff"}
-                        background={"#ff781f"}
-                        font={"1rem"}
-                        arrow="down"
-                        >
-                        <span>Ver proyectos</span>
-                      </Botn>
+                  <h2>{item.Home.h3}</h2>
+                  <h1>{item.Home.h2}</h1>
+                  <h3 style={{ marginBottom: "2rem" }}>{item.Home.h1}</h3>
+                  <Botn color={"#fff"}
+                    background={"#ff781f"}
+                    font={"1rem"}
+                    arrow="down"
+                    handleClick={() =>
+                      document
+                        .getElementById("Projects")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }>
+                    <span>Ver proyectos</span>
+                  </Botn>
                 </Stack>
 
               </div>

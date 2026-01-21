@@ -14,7 +14,9 @@ const Social = ({ marginTop }) => {
                         opacity: 1, // Cambiar la opacidad del icono 
                     },
                 },
-            }} >
+            }} 
+                href="https://github.com/renatogastonruizgithub?tab=repositories" target={"_blank"}
+            >
                 <GitHubIcon sx={{ color: "#fff", opacity: ".7 ", fontSize: "2rem" }} />
             </IconButton>
             <IconButton sx={{
@@ -25,12 +27,13 @@ const Social = ({ marginTop }) => {
                         opacity: 17
                     },
                 },
-            }}>
+            }}
+            href="https://www.linkedin.com/in/renato-gaston-ruiz/" target={"_blank"}
+            >
                 <LinkedInIcon sx={{ color: "#fff", opacity: ".7 ", fontSize: "2rem" }} />
+                
             </IconButton>
-            {/*   <a href="https://www.linkedin.com/in/renato-gaston-ruiz/" target={"_blank"}> <i className="bi bi-linkedin"></i></a>
-
-            <a href="https://github.com/renatogastonruizgithub" target={"_blank"}><i className="bi bi-github"></i></a> */}
+           
         </Stack>
     )
 }

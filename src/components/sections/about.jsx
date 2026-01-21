@@ -40,21 +40,8 @@ const About = () => {
                         {aboutMe}
 
                         <Social marginTop={2}></Social>
-                    </Grid>
-                {/*     <Grid item xs={12} md={12} lg={12}>
-                        <div style={{
-                            position: "relative",
-                            width: "100%",
-                            marginLeft: "auto",
-                            marginRight: "auto",
-                            marginTop: "2rem"
-
-                        }}>
-
-                           
-                        </div> </Grid> */}
-                         <Skills></Skills>
-                   
+                    </Grid>            
+                         <Skills></Skills>                   
                     <Grid item xs={12} md={12} lg={12} >
 
                         <div style={{

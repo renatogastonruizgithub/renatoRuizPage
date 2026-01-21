@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { Container } from "@mui/material";
 import { usePortfolio } from "../../contextApi/context";
 import CustomLink from "../shareds/customLink"
-
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
 
 
@@ -19,7 +19,7 @@ export default function Navbar() {
   }, [])
 
   const location = useLocation();
-
+const router = useNavigate()
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function Navbar() {
                 src={logo}
                 alt="Desarrollador web"
                 style={{ width: "50px", height: "50px" }}
-              /* onClick={() => (router('/'))} */
+              onClick={() => (router('/'))}
               />
               <div onClick={() => setMenu(!menu)}>
                 <span></span>

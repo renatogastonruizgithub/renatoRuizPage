@@ -8,7 +8,7 @@ import { Container } from "@mui/material";
 
 export default function Footer() {
   const today = new Date();
-  /* const router = useNavigate(); */
+const router = useNavigate()
   return (
 
 
@@ -21,7 +21,7 @@ export default function Footer() {
               src={logo}
               alt="Desarrollador web"
               style={{ width: "50px", height: "50px" }}
-            /*  onClick={() => router('/')} */
+            onClick={() => router('/')} 
             />
             <Social></Social>
           </div>

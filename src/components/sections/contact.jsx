@@ -16,7 +16,7 @@ const Contact = () => {
                 <div className={styles.wrapperContact}>
                     <div className={styles.containerTitle}>
                         <Title title="Contactame"></Title>
-                        <p>No dude en ponerse en contacto con migo, envié el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+                        <p>No dude en ponerse en contacto conmigo, envié el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
                     </div>
 
                     <div className={styles.containerForm}>

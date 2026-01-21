@@ -1,18 +1,16 @@
 import styles from "../../assets/styles/projects.module.scss";
 import { usePortfolio } from "../../contextApi/context";
-import Botn from "../../components/shareds/buton";
 import { useNavigate } from "react-router-dom";
 import Title from "../shareds/title";
-import { Container, Stack, Typography, Grid } from "@mui/material";
-import Slider from "../shareds/slider";
-import { SwiperSlide } from "swiper/react";
+import { Container, Grid } from "@mui/material";
 import ProjectCard from "../shareds/ProjectCard";
+
 
 
 const Projects = () => {
     const router = useNavigate();
     const {  projects } = usePortfolio();
- 
+       
     return (
 
         <section className={styles.sectionProjects} id="Projects">

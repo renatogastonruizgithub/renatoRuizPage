@@ -34,7 +34,7 @@ const Skills = () => {
     )
     return (
         <Grid container spacing={0}>   
-            <Typography variant="h6" color="#fff" sx={{ marginBottom: "2rem" }}>Habilidades</Typography>
+            <Typography variant="h6" color="#fff" sx={{ marginTop:"1rem" }}>Habilidades</Typography>
             <Grid item xs={12} md={12} lg={12} >
                    <div style={{
                             position: "relative",
@@ -46,10 +46,11 @@ const Skills = () => {
                         }}>
                               <Slider
                     centeredSlides={true}
-                    slidesPerViewMobile={2}
-                    slidesPerViewTablet={3}
-                    slidesPerViewDesktop={4}
-                    slidesPerView={4}>
+                    slidesPerViewMobile={3}
+                    slidesPerViewTablet={5}
+                    slidesPerViewDesktop={6}
+                    slidesPerView={4} >
+                    
                     {skills}
                 </Slider>
 

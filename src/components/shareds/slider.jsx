@@ -36,17 +36,16 @@ const Slider = ({
             1024: {
                 slidesPerView: slidesPerViewDesktop,
                 spaceBetween: 20,
-                     autoplay: {
+                           autoplay: {
                 delay: AutoplayDelay,
-                disableOnInteraction: false,
-            },
-            },
+                disableOnInteraction: true,
+            } },
             1440: {
                 slidesPerView: slidesPerViewDesktop,
                 spaceBetween: 20,
                      autoplay: {
                 delay: AutoplayDelay,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
             },
             },
         },
@@ -58,10 +57,7 @@ const Slider = ({
             el: paginationRef.current,
             clickable: true,
         },
-        autoplay: {
-            delay: AutoplayDelay,
-            disableOnInteraction: false,
-        },
+     
         /*  freeMode: true, */
         initialSlide: 0,
         /*   centeredSlides: centeredSlides, */
