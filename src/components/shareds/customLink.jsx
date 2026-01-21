@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../../assets/styles/navbar.module.scss";
 import { Link, NavLink, useNavigate } from 'react-router-dom'
-
+import { motion } from "framer-motion";
 
 const CustomLink = () => {
   const [activeLink, setActiveLink] = useState(null);
   const links = [
     { title: 'Home', url: '#Banner' },
     { title: 'Proyectos', url: '#Projects' },
-    { title: 'Sobre mi', url: '#About' },    
+    { title: 'Sobre mi', url: '#About' },
     { title: 'Contactame', url: '#Contact' },
 
   ];
@@ -50,20 +50,32 @@ const CustomLink = () => {
   return (
 
     links.map((item, i) => {
-
+      const fromLeft = i < 2;
       return (
 
         <li key={i} className={styles.menuLinks}>
-          <NavLink onClick={(e) => handleLinkClick(e, item.url)} to={item.url}
-            className={
-              activeLink === item.url ? "activeLink" : ""
-            }
+          <motion.div
+
+            key={i}
+            initial={{ x: fromLeft ? -40 : 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300, duration: 0.2, delay: i * 0.2 }}
           >
-            {item.title}
-          </NavLink >
+            <NavLink onClick={(e) => handleLinkClick(e, item.url)} to={item.url}
+              className={
+                activeLink === item.url ? "activeLink" : ""
+              }
+            >
+              {item.title}
+            </NavLink >
 
-
+          </motion.div>
         </li>
+
+
       );
     })
 

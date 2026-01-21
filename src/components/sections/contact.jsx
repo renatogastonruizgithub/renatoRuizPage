@@ -5,21 +5,49 @@ import { useState } from "react";
 import axios from "axios";
 import { Container } from "@mui/material";
 import Title from "../shareds/title";
+import { motion } from "framer-motion";
 const Contact = () => {
     const [enviado, setEnviado] = useState(false)
     const [errorAlEnviar, seterrorAlEnviar] = useState(false)
     const [loader, seteLoader] = useState(false)
     const [disableForm, setDisableForm] = useState(false)
+
+
     return (
         <section className={styles.sectionContact} id="Contact">
             <Container maxWidth="md">
-                <div className={styles.wrapperContact}>
-                    <div className={styles.containerTitle}>
-                        <Title title="Contactame"></Title>
-                        <p>No dude en ponerse en contacto conmigo, envié el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
-                    </div>
 
-                    <div className={styles.containerForm}>
+                <motion.div
+                    className={styles.wrapperContact}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+
+                    <motion.div
+                        className={styles.containerTitle}
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <Title title="Contactame" />
+                        <p>
+                            No dude en ponerse en contacto conmigo, envié el siguiente formulario y me
+                            pondré en contacto con usted lo antes posible.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        className={styles.containerForm}
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                    >
+
+
                         <Formik
                             initialValues={{
                                 nombre: "",
@@ -51,7 +79,7 @@ const Contact = () => {
 
                                 const emailPayload = {
                                     nombre: valores.nombre, // tu email destino
-                                    email:  valores.email,
+                                    email: valores.email,
                                     motivo: valores.motivo
                                 };
 
@@ -60,13 +88,13 @@ const Contact = () => {
                                         setEnviado(true)
                                         resetForm()
                                         seteLoader(false)
-                                        setTimeout(() => { setEnviado(false), setDisableForm(false) }, 3000) 
+                                        setTimeout(() => { setEnviado(false), setDisableForm(false) }, 3000)
                                     })
-                                    .catch(() => {                                      
+                                    .catch(() => {
                                         seterrorAlEnviar(true)
                                         seteLoader(false)
                                         setTimeout(() => { seterrorAlEnviar(false), setDisableForm(false) }, 10000)
-                                        resetForm() 
+                                        resetForm()
                                     })
 
                             }}
@@ -98,14 +126,17 @@ const Contact = () => {
                                         </div>
                                         {touched.motivo && errors.motivo && <div className={styles.errors}>{errors.motivo}</div>}
                                     </div>
+                            
+                                        <Botn color={"#fff"}
+                                            background={"#ff781f"}
+                                            font={"1rem"}
+                                            arrow="right"
+                                            handleClick={() => handleSubmit()}>
+                                            <span>Enviar</span>
+                                        </Botn>
 
-                                    <Botn color={"#fff"}
-                                        background={"#ff781f"}
-                                        font={"1rem"}
-                                        arrow="right"
-                                        handleClick={() => handleSubmit()}>
-                                        <span>Enviar</span>
-                                    </Botn>
+                                 
+
                                 </form>
 
                             )}
@@ -124,12 +155,13 @@ const Contact = () => {
                                     <a href="https://wa.me/3512087800?text=hola" target="_blank"><i class="bi bi-whatsapp"></i> 351817364</a>
                                 </div>
 
-                            </div>}
+                            </div>
+                            }
                         </div>
 
 
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
 
             </Container>

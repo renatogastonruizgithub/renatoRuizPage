@@ -8,6 +8,7 @@ import {
   Stack,
   Box
 } from "@mui/material";
+import { motion } from "framer-motion";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
@@ -106,21 +107,28 @@ const ProjectCard = ({
         )}
 
         {demoUrl && (
-          <Button
-            variant="contained"
-            size="small"
-            endIcon={<LaunchIcon />}
-            href={demoUrl}
-            target="_blank"
-            sx={{
-              backgroundColor: "#ff7a00",
-              "&:hover": {
-                backgroundColor: "#ff8f26"
-              }
-            }}
+          <motion.div
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            Demo
-          </Button>
+            <Button
+              variant="contained"
+              size="small"
+              endIcon={<LaunchIcon />}
+              href={demoUrl}
+              target="_blank"
+              sx={{
+                backgroundColor: "#ff7a00",
+                "&:hover": {
+                  backgroundColor: "#ff8f26"
+                }
+              }}
+            >
+              Demo
+            </Button>
+          </motion.div>
+
         )}
       </Box>
     </Card>

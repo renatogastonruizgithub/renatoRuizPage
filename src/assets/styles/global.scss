@@ -221,12 +221,18 @@ span {
 }
 
 .colorPagination {
-  bottom: -10px !important;
+  bottom: -25px !important;
 
   .swiper-pagination-bullet-active {
-    background-color: #fff;
+    background-color: #fff !important;;
     opacity: 1;
   }
+  /* Inactivas */
+.swiper-pagination-bullet {
+  background-color: #191919; /* tu color */
+  opacity: 1;
+}
+
 }
 
 

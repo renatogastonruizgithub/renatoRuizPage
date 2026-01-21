@@ -8,6 +8,9 @@ import { Container } from "@mui/material";
 import { usePortfolio } from "../../contextApi/context";
 import CustomLink from "../shareds/customLink"
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+
 export default function Navbar() {
 
 
@@ -19,7 +22,7 @@ export default function Navbar() {
   }, [])
 
   const location = useLocation();
-const router = useNavigate()
+  const router = useNavigate()
 
   return (
     <>
@@ -28,22 +31,28 @@ const router = useNavigate()
       <section >
         <Container maxWidth="md">
           <div className={`${visibleElement ? styles.containerNav : "navScroller"}`} >
+            <motion.div
+              className={styles.contentImg}
+              initial={{ x: 40, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className={styles.logoAndMenu}>
+                <img
 
-            <div className={styles.logoAndMenu}>
-              <img
+                  src={logo}
+                  alt="Desarrollador web"
+                  style={{ width: "50px", height: "50px" }}
+                  onClick={() => (router('/'))}
+                />
 
-                src={logo}
-                alt="Desarrollador web"
-                style={{ width: "50px", height: "50px" }}
-              onClick={() => (router('/'))}
-              />
-              <div onClick={() => setMenu(!menu)}>
-                <span></span>
-                <span></span>
-                <span></span>
+                <div onClick={() => setMenu(!menu)}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
               </div>
-            </div>
-
+            </motion.div>
             <div className={`${styles.contentMenuLinks} ${visibleElement ? "fondo" : "fondo"}`}>
               <CustomLink></CustomLink>
             </div>
